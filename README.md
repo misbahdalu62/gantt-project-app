@@ -8,6 +8,24 @@ Dibangun dengan **React 18 + TypeScript + Vite**. Seluruh data disimpan otomatis
 
 ---
 
+## 📸 Tangkapan Layar
+
+**1. Gantt Chart & Manajemen Tugas** — bar tugas berwarna, sub-tugas, panah dependency,
+tanda jalur kritis (outline merah), shading akhir pekan, dan garis “hari ini”.
+
+![Gantt Chart dan Manajemen Tugas](./docs/01-gantt-chart.png)
+
+**2. Analisis Proyek** — jalur kritis, diagram jaringan PERT, analisis peluang,
+serta tabel jadwal CPM (ES/EF/LS/LF/slack) dan estimasi PERT per tugas.
+
+![Analisis Jalur Kritis dan Diagram PERT](./docs/02-analisis-pert.png)
+
+> Screenshot di atas dihasilkan otomatis dari aplikasi yang berjalan. Untuk
+> memperbaruinya: jalankan `npm run dev` di satu terminal, lalu `npm run screenshots`.
+> Skrip memakai Chrome yang sudah terpasang (via `puppeteer-core`), tanpa mengunduh Chromium.
+
+---
+
 ## ✨ Fitur
 
 ### 1. Manajemen Tugas (Task Management)
@@ -80,6 +98,7 @@ npm run preview
 | `npm run typecheck` | Memeriksa tipe TypeScript tanpa output |
 | `npm run test` | Menjalankan seluruh unit & smoke test (Vitest) |
 | `npm run test:watch` | Menjalankan test dalam mode watch |
+| `npm run screenshots` | Menyegarkan screenshot di `docs/` (perlu dev server aktif) |
 
 ---
 
@@ -126,6 +145,12 @@ npm run preview
 ├── vite.config.ts
 ├── .gitignore
 ├── README.md
+├── docs                       # Screenshot untuk README
+│   ├── 01-gantt-chart.png
+│   └── 02-analisis-pert.png
+├── scripts                    # Skrip bantu (screenshot)
+│   ├── screenshots.mjs
+│   └── verify-screenshots.mjs
 └── src
     ├── main.tsx                 # Entry point React
     ├── App.tsx                  # Header, tab, orkestrasi panel & modal
